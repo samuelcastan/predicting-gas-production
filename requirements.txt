@@ -7,3 +7,4 @@ ydata-profiling
 mlflow
 hydra-core
 ipykernel
+missingno
