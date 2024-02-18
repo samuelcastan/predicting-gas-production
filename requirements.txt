@@ -8,3 +8,4 @@ mlflow
 hydra-core
 ipykernel
 missingno
+statsmodels
