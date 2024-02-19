@@ -1,0 +1,1 @@
+{"criterion": "absolute_error", "max_depth": null, "max_features": "sqrt", "max_samples": null, "n_estimators": 500}
