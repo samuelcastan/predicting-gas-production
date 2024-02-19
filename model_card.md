@@ -5,7 +5,7 @@
 - **Model Type:** Regression
 - **Model Architecture:** Random Forest
 - **Model Hyperparametrs:** Refer to [hyperparameters](results/quick_modeling/hyperparameters.json) file.
-- **Metrics:** Because of time, R-squared was used for evaluating the model. Moreso, conformal prediction was used to obtain prediciton intervals with a 95% coverage.
+- **Metrics:** Because of time, R-squared was used for evaluating the model. More so, conformal prediction was used to obtain prediciton intervals with a 95% coverage.
 
 ## Model Performance
 
