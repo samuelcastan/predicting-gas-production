@@ -62,7 +62,7 @@ pip install -r requirements.txt
 pip install -r requirements.txt
 ```
 
-## Pending things to do (but not limited) and improve on next iterations
+## Pending tasks to complete and improve the project
 - Validate normality of residuals, presence of heteroscedasticity and other regression validations.
 - Add feature domains for data validation when inferecing on new data.
 - Modularize code using config file.
