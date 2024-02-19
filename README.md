@@ -5,29 +5,52 @@ Predicting the cumulative twelve month gas production from a set of US gas wells
 ## Project structure
 
 ```
-├── requirements.txt
-├── model_card.md
-├── main.py
 ├── data
-│   └── bank_data.csv
-├── notebooks
-│   └── ydataprofiling.ipynb
-│   └── eda.ipynb
-│   └── modeling.ipynb
-├── images
-│   ├── eda
-│   │   └── histograms
-│   │   └── bar_plots
-│   │   └── heatmaps
-│   └── results
-│       └── feature_importance.png
-│       └── feature_importance.png
-├── logs
-│   └── main.log
+│   └── raw
+│   └── clean
+│   └── test_inference
 ├── models
+│   └── q_yhat_calib.json
 │   └── inference_pipeline.pkl
+├── notebooks
+│   └── basic_cleaning.ipynb
+│   └── conformal_prediction.ipynb
+│   └── eda.ipynb
+│   └── quick_modeling.ipynb
+├── results
+│   ├── conformal_prediction
+│   │   └── coverage.csv
+│   │   └── actual_vs_predicted_with_interval.png
+│   ├── eda
+│   │   └── boxplots
+│   │   └── countplots
+│   │   └── histograms
+│   │   └── missing_values
+│   │   └── scatterplots
+│   └── quick_modeling
+│       └── features_importances.csv
+│       └── grid_search_cv.csv
+│       └── hyperparameters.json
+├── test_pipeline.ipynb
+├── developmemt_conclusions.md
+├── model_card.md
 └── README.md
+├── requirements.txt
 ```
+## Main files:
+- requirements: Contains the library dependencies that the entire project uses.
+- basic_cleaning.ipynb: Clean data appropiately for analysis.
+- eda.ipynb: Obtain insights of features and target variable.
+- quick_modeling.ipynb: Feature processing and enginering, hyperparameter tuning, and more.
+- conformal_prediction: Apply conformal prediction to winner model to obtain prediction intervals.
+
+
+Input files:
+- data: where the source data lives (the code is written to read a .csv file).
+
+Output directories:
+- results: Here it is stored all the EDA visualizations (countplost, histograms, scatterplots), model training and evaluation results.
+- models: Here are the pickled pipeline and conformalized quantile value stored.
 
 ## Install requirements
 This instructions assume you're already have installed python (3.9)
@@ -40,6 +63,16 @@ pip install -r requirements.txt
 pip install -r requirements.txt
 ```
 
+## Pending things to do (but not limited) and improve on next iterations
+- Validate normality of residuals, presence of heteroscedasticity and other regression validations.
+- Add feature domains for data validation when inferecing on new data.
+- Modularize code using config file.
+- Configure and add log files.
+- Create src folder and move to python script instead of notebooks. they are good for development but not for production.
+- Depending on productionization of solution, deploy model as an API or batch inference.
+- Implement monitoring, retraining and redeployment.
+- CI/CD
+- Version artifacts and add remote storage.
 
 ## Columns Description
 - **treatment company**: The treatment company who provides treatment service.
@@ -73,15 +106,6 @@ pip install -r requirements.txt
 
 ## Assumptions and constraints
 - The production model assumes that there'll not be new or removed treatment companies and operators
-- The date of extraction for training data is assumed to be 15/2/2024
-- Inductive Conformal Prediction (ICP) will be used for modelling. 
+- Inductive Conformal Prediction (ICP) will be used for modelling.
+- The ICP process involves splitting the dataset into a proper training set and a calibration set. The training set is used to create the initial point prediction model, while the calibration set is utilized to calculate conformity scores and produce the prediction intervals of the unseen points."
 
-"Like all other models from the conformal prediction family, ICP is model-agnostic in terms of the underlying point prediction model and data distribution and comes with automatic validity guarantees for final samples of any size."
-
-"The ICP process involves splitting the dataset into a proper training set and a calibration set. The training set is used to create the initial point prediction model, while the calibration set is utilized to calculate conformity scores and produce the prediction intervals of the unseen points."
-
-"ICP’s efficiency and flexibility have made it a popular choice for uncertainty estimation in various applications."
-
-
-- PENDING TO ADD FEATURE DOMAINS FOR DATA VALIDATION WHEN INFERECING ON NEW DATA
-- PENDING TO VALIDATE NORMALITY OF RESIDUALS, PRESENCE OF HETEROSCEDASTICITY 

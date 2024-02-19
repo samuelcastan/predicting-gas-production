@@ -2,7 +2,7 @@
 
 ## Model Details
 
-- **Model Name:** [Name of the model]
+- **Model Name:** Random 
 - **Model Version:** [Version number]
 - **Model Type:** Regression
 - **Model Architecture:** [Brief description of the architecture, e.g., linear regression, decision tree regression, neural network regression, etc.]
@@ -35,34 +35,16 @@
 
 [Describe the intended use cases for the model, including any limitations or constraints on its use.]
 
-## Ethical Considerations
-
-[Discuss any potential biases, fairness issues, or ethical concerns related to the model or its application.]
-
 ## Caveats and Known Limitations
+- 
 
 [List any known limitations or weaknesses of the model, including scenarios where it may not perform well.]
 
-## Decision Thresholds
-
-[Describe any decision thresholds or criteria used when applying the model's predictions.]
-
-## Maintenance
-
-[Provide information on how the model will be maintained and updated over time.]
-
 ## Responsible AI Considerations
-
-[Discuss steps taken to ensure responsible AI practices, including data privacy, transparency, and accountability measures.]
+Beware that this model is intended to be used on the treatment companies and operators. Model might be biased on giving more weight to a specific operator and/or company
 
 ## Authors
+Samuel David Castán Alejandre
 
-[List the authors or contributors involved in developing and evaluating the model.]
-
-## License
-
-[Specify the license under which the model is distributed, if applicable.]
-
-## Citation
-
-[Provide a citation for the model, including any relevant papers or resources.]
+## Special thanks
+- Conformal Prediction development was inspired on Valery Manokhin's book - Practical Guide to Applied Conformal Prediction in Python: Learn and apply the best uncertainty frameworks to your industry applications

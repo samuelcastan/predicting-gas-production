@@ -13,6 +13,7 @@ The Conformal Prediction applied to the regression task yielded the following in
 
 3. **Addressing Big Errors**:
    - The presence of significant errors, particularly at the higher end of the feature domain, suggests that the model struggles with regions of sparse or scattered data. To address this, efforts should be directed towards collecting more data in these areas or implementing data augmentation techniques to augment the existing dataset.
+    - Treatment company and operator should be more analyzed. Didn't had time to make a better feature enginering but on quick experimentation it showed slight model improvement.
 
 4. **Further Model Iterations**:
    - Iterative model development and refinement should be pursued to enhance predictive performance.
