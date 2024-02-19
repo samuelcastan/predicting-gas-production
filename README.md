@@ -81,3 +81,7 @@ pip install -r requirements.txt
 "The ICP process involves splitting the dataset into a proper training set and a calibration set. The training set is used to create the initial point prediction model, while the calibration set is utilized to calculate conformity scores and produce the prediction intervals of the unseen points."
 
 "ICP’s efficiency and flexibility have made it a popular choice for uncertainty estimation in various applications."
+
+
+- PENDING TO ADD FEATURE DOMAINS FOR DATA VALIDATION WHEN INFERECING ON NEW DATA
+- PENDING TO VALIDATE NORMALITY OF RESIDUALS, PRESENCE OF HETEROSCEDASTICITY 
