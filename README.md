@@ -1,7 +1,6 @@
 # predicting-gas-production
 Predicting the cumulative twelve month gas production from a set of US gas wells
 
-
 ## Project structure
 
 ```
@@ -43,7 +42,7 @@ Predicting the cumulative twelve month gas production from a set of US gas wells
 - eda.ipynb: Obtain insights of features and target variable.
 - quick_modeling.ipynb: Feature processing and enginering, hyperparameter tuning, and more.
 - conformal_prediction: Apply conformal prediction to winner model to obtain prediction intervals.
-
+- test_pipeline.ipynb: Test saved pipeline file with a single instance of data: Apply conformal prediction.
 
 Input files:
 - data: where the source data lives (the code is written to read a .csv file).
