@@ -41,7 +41,7 @@ pip install -r requirements.txt
 ```
 
 
-## Feature Description/Assumptions
+## Columns Description
 - **treatment company**: The treatment company who provides treatment service.
 - **azimuth**: Well drilling direction.
 - **md (ft)**: Measure depth.
