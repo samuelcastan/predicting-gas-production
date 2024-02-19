@@ -10,3 +10,4 @@ ipykernel
 missingno
 statsmodels
 joblib
+yellowbrick
